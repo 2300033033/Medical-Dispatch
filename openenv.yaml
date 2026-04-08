@@ -1,0 +1,52 @@
+name: emergency-medical-dispatch-env
+version: 1.0.0
+description: |
+  Real-world 911 emergency medical dispatch environment where an AI agent
+  must prioritize emergencies, dispatch ambulances, and provide life-saving
+  instructions to callers. Based on actual emergency medical dispatch protocols.
+
+author: Your Name
+license: MIT
+
+observation_space:
+  type: object
+  properties:
+    emergencies:
+      type: array
+      items:
+        type: object
+        properties:
+          id: {type: string}
+          type: {type: string}
+          severity: {type: integer}
+          location: {type: array, items: {type: integer}}
+          critical_time_minutes: {type: integer}
+    ambulances:
+      type: array
+      items:
+        type: object
+        properties:
+          id: {type: string}
+          location: {type: array, items: {type: integer}}
+          status: {type: string}
+          eta_minutes: {type: integer}
+    hospitals:
+      type: array
+      items:
+        type: object
+        properties:
+          id: {type: string}
+          location: {type: array, items: {type: integer}}
+          capacity: {type: integer}
+          trauma_level: {type: integer}
+    time_elapsed: {type: integer}
+
+action_space:
+  type: object
+  properties:
+    emergency_id: {type: string}
+    ambulance_id: {type: string}
+    instructions: {type: string}
+
+reward_range: [0.0, 1.0]
+episode_length: 15

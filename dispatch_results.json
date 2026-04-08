@@ -1,0 +1,34 @@
+{
+  "report": [
+    {
+      "difficulty": "easy",
+      "lives_saved": 1,
+      "total_patients": 2,
+      "survival_rate": 0.5,
+      "task_score": 0.0,
+      "total_reward": 0.948,
+      "steps": 2
+    },
+    {
+      "difficulty": "medium",
+      "lives_saved": 3,
+      "total_patients": 4,
+      "survival_rate": 0.75,
+      "task_score": 0.0,
+      "total_reward": 2.144,
+      "steps": 5
+    },
+    {
+      "difficulty": "hard",
+      "lives_saved": 4,
+      "total_patients": 6,
+      "survival_rate": 0.6666666666666666,
+      "task_score": 0.7666666666666666,
+      "total_reward": 2.408,
+      "steps": 10
+    }
+  ],
+  "total_lives_saved": 8,
+  "overall_survival_rate": 0.6666666666666666,
+  "average_task_score": 0.25555555555555554
+}
